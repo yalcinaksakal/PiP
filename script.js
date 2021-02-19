@@ -24,7 +24,7 @@ async function selectMediaStream() {
 
     const mediaStream = await navigator.mediaDevices.getDisplayMedia();
 
-    getSupportedConstraints();
+   
     if (!mediaStream) throw new Error("Couldnt get media stream");
     videoElement.srcObject = mediaStream;
     videoElement.onloadedmetadata = () => {
