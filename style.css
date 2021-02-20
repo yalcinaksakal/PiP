@@ -30,7 +30,7 @@ video {
   width: 70%;
   height: auto;
   border: 2px solid rgb(82, 82, 82);
-
+  background-color: black;
   border-radius: 15px;
   margin-top: 20px;
 }

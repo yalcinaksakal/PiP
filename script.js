@@ -56,7 +56,7 @@ function disposeVideo() {
 btnSelect.addEventListener("click", async () => {
   stopCapture();
   disposeVideo();
-
+  errorContainer.textContent = "";
   toogleButton();
   if (document.pictureInPictureElement) await document.exitPictureInPicture();
 
