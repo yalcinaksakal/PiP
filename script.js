@@ -32,13 +32,12 @@ async function selectMediaStream() {
     };
   } catch (err) {
     errorContainer.textContent = err.message;
-    btnSelect.disabled = false;
+
     btnStart.disabled = true;
   }
 }
 
 function toogleButton() {
-  btnSelect.disabled = !btnSelect.disabled;
   btnStart.disabled = !btnStart.disabled;
 }
 
@@ -91,3 +90,8 @@ if (window.mobileAndTabletCheck()) {
   btnSelect.disabled = true;
   btnStart.disabled = true;
 }
+
+videoElement.addEventListener("leavepictureinpicture", () => {
+  // Video left Picture-in-Picture mode.
+  btnStart.disabled = false;
+});
